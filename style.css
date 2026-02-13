@@ -228,3 +228,272 @@ footer {
         flex-direction: column;
     }
 }
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Accessible, readable font */
+    margin: 0;
+    padding: 0;
+    background-color: #722F37; /* Dark wine red */
+    color: #FFFFFF; /* White text for contrast */
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Full-Page Heart Overlay */
+#heart-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: red; /* Red heart color covering the page */
+    color: white; /* White text color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    overflow-y: auto; /* Scrollable if text overflows */
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.heart-shape {
+    position: absolute;
+    width: 200px; /* Large heart shape */
+    height: 180px;
+    background-color: red;
+    margin-bottom: 2rem;
+}
+
+.heart-shape:before,
+.heart-shape:after {
+    position: absolute;
+    content: "";
+    left: 100px;
+    top: 0;
+    width: 100px;
+    height: 160px;
+    background-color: red;
+    border-radius: 100px 100px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart-shape:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+#heart-text {
+    max-width: 90%;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0;
+    z-index: 1; /* Above the heart shape */
+}
+
+#heart-page button {
+    margin-top: 2rem;
+    background-color: white;
+    color: red;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#heart-page button:hover {
+    background-color: #FFB6C1; /* Pink hover */
+}
+
+/* Navigation */
+header {
+    background-color: #228B22; /* Forest dark green */
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #FFFF00; /* Bright yellow */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #FFB6C1; /* Pink */
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(45deg, #722F37, #FFFF00); /* Merged wine red and bright yellow */
+    color: #FFFFFF;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Floating Heart */
+.floating-heart {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    background-color: #FFB6C1; /* Pink */
+    color: #722F37;
+    padding: 1rem;
+    border-radius: 50%;
+    animation: float 3s ease-in-out infinite;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Purpose Section */
+.purpose {
+    padding: 2rem;
+    text-align: center;
+    background-color: #E6E6FA; /* Lavender */
+    color: #000000; /* Black for readability */
+}
+
+#effort-meter {
+    margin-top: 1rem;
+}
+
+#effort-button {
+    background-color: #722F37;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#effort-button:hover {
+    background-color: #228B22;
+}
+
+/* Big Heart Section */
+.big-heart-section {
+    text-align: center;
+    padding: 2rem;
+    background-color: #FFFFFF; /* White */
+    color: #722F37;
+}
+
+.big-heart {
+    font-size: 5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.big-heart:hover {
+    transform: scale(1.1);
+}
+
+.cloud {
+    display: none;
+    font-size: 4rem;
+    margin-top: 1rem;
+    animation: fadeIn 1s;
+}
+
+.popups {
+    margin-top: 1rem;
+}
+
+.popup {
+    display: inline-block;
+    background-color: #FFB6C1;
+    color: #722F37;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    animation: popIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes popIn {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+/* Quick Nav */
+.quick-nav {
+    padding: 2rem;
+    text-align: center;
+    background-color: #228B22;
+    color: #FFFFFF;
+}
+
+.nav-heart {
+    display: inline-block;
+    background-color: #FFB6C1;
+    color: #722F37;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.nav-heart:hover {
+    transform: scale(1.1);
+}
+
+/* About Page Illustrations */
+.illustration {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #E6E6FA;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.heart-icon, .cloud-icon, .popup-icon {
+    font-size: 3rem;
+    margin-right: 1rem;
+}
+
+/* Structured Sections */
+.structured-sections {
+    padding: 2rem;
+    background-color
