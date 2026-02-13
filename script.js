@@ -71,6 +71,14 @@ function hideHeart() {
 function hideHeart() {
     document.getElementById("heart-page").style.display = "none";
 }
+function openLove() {
+    document.getElementById("loveOverlay").style.display = "flex";
+}
+
+function closeLove() {
+    document.getElementById("loveOverlay").style.display = "none";
+}
+
 
 
 
