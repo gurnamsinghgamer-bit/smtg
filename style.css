@@ -497,3 +497,11 @@ nav a:hover {
 .structured-sections {
     padding: 2rem;
     background-color
+.enter-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: white;
+    color: red;
+    text-decoration: none;
+    border-radius: 20px;
+}
