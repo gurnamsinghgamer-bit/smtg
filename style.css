@@ -546,10 +546,10 @@ nav a:hover {
     z-index: 9999;
 }
 
-.big-heart {
+.overlay-heart {
     position: relative;
-    width: 90vw;
-    height: 90vh;
+    width: 500px;
+    height: 450px;
     background: red;
     transform: rotate(-45deg);
     display: flex;
@@ -557,22 +557,27 @@ nav a:hover {
     align-items: center;
 }
 
-.big-heart::before,
-.big-heart::after {
+
+.overlay-heart::before,
+.overlay-heart::after {
+
     content: "";
     position: absolute;
-    width: 90vw;
-    height: 90vh;
+    width: 500px;
+height: 450px;
+
     background: red;
     border-radius: 50%;
 }
 
-.big-heart::before {
+.overlay-heart::before {
+
     top: -45vh;
     left: 0;
 }
 
-.big-heart::after {
+.overlay-heart::after {
+
     left: 45vw;
     top: 0;
 }
@@ -596,5 +601,6 @@ nav a:hover {
     border-radius: 20px;
     cursor: pointer;
 }
+
 
 
