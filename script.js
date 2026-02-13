@@ -64,3 +64,9 @@ function navigateTo(page) {
     window.location.href = page;
 
 }
+function hideHeart() {
+    const heartPage = document.getElementById("heart-page");
+    heartPage.style.display = "none";
+}
+
+
