@@ -493,10 +493,12 @@ nav a:hover {
     margin-right: 1rem;
 }
 
-/* Structured Sections */
 .structured-sections {
     padding: 2rem;
-    background-color
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
 .enter-btn {
     display: inline-block;
     padding: 12px 25px;
