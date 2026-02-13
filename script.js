@@ -68,5 +68,9 @@ function hideHeart() {
     const heartPage = document.getElementById("heart-page");
     heartPage.style.display = "none";
 }
+function hideHeart() {
+    document.getElementById("heart-page").style.display = "none";
+}
+
 
 
