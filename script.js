@@ -54,8 +54,13 @@ if (bigHeart) {
         }, 1000); // Delay for animation
     });
 }
+function hideHeart() {
+    document.getElementById("heart-page").style.display = "none";
+}
+
 
 // Navigation Function
 function navigateTo(page) {
     window.location.href = page;
+
 }
