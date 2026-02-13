@@ -533,4 +533,68 @@ nav a:hover {
     cursor: pointer;
     font-weight: bold;
 }
+.love-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.big-heart {
+    position: relative;
+    width: 90vw;
+    height: 90vh;
+    background: red;
+    transform: rotate(-45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-heart::before,
+.big-heart::after {
+    content: "";
+    position: absolute;
+    width: 90vw;
+    height: 90vh;
+    background: red;
+    border-radius: 50%;
+}
+
+.big-heart::before {
+    top: -45vh;
+    left: 0;
+}
+
+.big-heart::after {
+    left: 45vw;
+    top: 0;
+}
+
+.love-text {
+    position: relative;
+    transform: rotate(45deg);
+    color: white;
+    width: 70%;
+    max-height: 70vh;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.love-text button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: white;
+    color: red;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
 
